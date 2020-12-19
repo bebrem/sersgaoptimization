@@ -1,0 +1,296 @@
+numberofgenes = 25;
+numberofpopulation = 50;
+elite = 0.1;
+crossoverrate = 0.8;
+iteration = 100;
+mutationrate = 0.15;
+stallgenlim = 11;
+bestfitness = matrix(iteration,numberofgenes+1);
+generation = matrix(numberofpopulation,numberofgenes+1);
+bestworstaverage = matrix(iteration,3);
+stallenh = 0;
+stalllimit = 0;
+for(it=1:iteration){
+    for(pop=1:numberofpopulation){
+        if(it==1){        
+            ind = matrix(1,numberofgenes);
+            for(x=1:numberofgenes){
+                ind(1,x) = round(rand);
+            }
+            generation(pop,1:numberofgenes) = ind;
+        }else{
+            ind(1,1:numberofgenes) = nextgen(pop,:);
+            generation(pop,1:numberofgenes) = ind;
+
+        }    
+    switchtolayout;
+    select("0");
+    set("enabled",ind(1));
+    select("1");
+    set("enabled",ind(2));
+    select("2");
+    set("enabled",ind(3));
+    select("3");
+    set("enabled",ind(4));
+    select("4");
+    set("enabled",ind(5));
+    select("5");
+    set("enabled",ind(5));
+    select("6");
+    set("enabled",ind(4));
+    select("7");
+    set("enabled",ind(3));
+    select("8");
+    set("enabled",ind(2));
+    select("9");
+    set("enabled",ind(1));
+    select("10");
+    set("enabled",ind(6));
+    select("11");
+    set("enabled",ind(7));
+    select("12");
+    set("enabled",ind(8));
+    select("13");
+    set("enabled",ind(9));
+    select("14");
+    set("enabled",ind(10));
+    select("15");
+    set("enabled",ind(10));
+    select("16");
+    set("enabled",ind(9));
+    select("17");
+    set("enabled",ind(8));
+    select("18");
+    set("enabled",ind(7));
+    select("19");
+    set("enabled",ind(6));
+    select("20");
+    set("enabled",ind(11));
+    select("21");
+    set("enabled",ind(12));
+    select("22");
+    set("enabled",ind(13));
+    select("23");
+    set("enabled",ind(14));
+    select("24");
+    set("enabled",ind(15));
+    select("25");
+    set("enabled",ind(15));
+    select("26");
+    set("enabled",ind(14));
+    select("27");
+    set("enabled",ind(13));
+    select("28");
+    set("enabled",ind(12));
+    select("29");
+    set("enabled",ind(11));
+    select("30");
+    set("enabled",ind(16));
+    select("31");
+    set("enabled",ind(17));
+    select("32");
+    set("enabled",ind(18));
+    select("33");
+    set("enabled",ind(19));
+    select("34");
+    set("enabled",ind(20));
+    select("35");
+    set("enabled",ind(20));
+    select("36");
+    set("enabled",ind(19));
+    select("37");
+    set("enabled",ind(18));
+    select("38");
+    set("enabled",ind(17));
+    select("39");
+    set("enabled",ind(16));
+    select("40");
+    set("enabled",ind(21));
+    select("41");
+    set("enabled",ind(22));
+    select("42");
+    set("enabled",ind(23));
+    select("43");
+    set("enabled",ind(24));
+    select("44");
+    set("enabled",ind(25));
+    select("45");
+    set("enabled",ind(25));
+    select("46");
+    set("enabled",ind(24));
+    select("47");
+    set("enabled",ind(23));
+    select("48");
+    set("enabled",ind(22));
+    select("49");
+    set("enabled",ind(21));
+    select("50");
+    set("enabled",ind(21));
+    select("51");
+    set("enabled",ind(22));
+    select("52");
+    set("enabled",ind(23));
+    select("53");
+    set("enabled",ind(24));
+    select("54");
+    set("enabled",ind(25));
+    select("55");
+    set("enabled",ind(25));
+    select("56");
+    set("enabled",ind(24));
+    select("57");
+    set("enabled",ind(23));
+    select("58");
+    set("enabled",ind(22));
+    select("59");
+    set("enabled",ind(21));
+    select("60");
+    set("enabled",ind(16));
+    select("61");
+    set("enabled",ind(17));
+    select("62");
+    set("enabled",ind(18));
+    select("63");
+    set("enabled",ind(19));
+    select("64");
+    set("enabled",ind(20));
+    select("65");
+    set("enabled",ind(20));
+    select("66");
+    set("enabled",ind(19));
+    select("67");
+    set("enabled",ind(18));
+    select("68");
+    set("enabled",ind(17));
+    select("69");
+    set("enabled",ind(16));
+    select("70");
+    set("enabled",ind(11));
+    select("71");
+    set("enabled",ind(12));
+    select("72");
+    set("enabled",ind(13));
+    select("73");
+    set("enabled",ind(14));
+    select("74");
+    set("enabled",ind(15));
+    select("75");
+    set("enabled",ind(15));
+    select("76");
+    set("enabled",ind(14));
+    select("77");
+    set("enabled",ind(13));
+    select("78");
+    set("enabled",ind(12));
+    select("79");
+    set("enabled",ind(11));
+    select("80");
+    set("enabled",ind(6));
+    select("81");
+    set("enabled",ind(7));
+    select("82");
+    set("enabled",ind(8));
+    select("83");
+    set("enabled",ind(9));
+    select("84");
+    set("enabled",ind(10));
+    select("85");
+    set("enabled",ind(10));
+    select("86");
+    set("enabled",ind(9));
+    select("87");
+    set("enabled",ind(8));
+    select("88");
+    set("enabled",ind(7));
+    select("89");
+    set("enabled",ind(6));
+    select("90");
+    set("enabled",ind(1));
+    select("91");
+    set("enabled",ind(2));
+    select("92");
+    set("enabled",ind(3));
+    select("93");
+    set("enabled",ind(4));
+    select("94");
+    set("enabled",ind(5));
+    select("95");
+    set("enabled",ind(5));
+    select("96");
+    set("enabled",ind(4));
+    select("97");
+    set("enabled",ind(3));
+    select("98");
+    set("enabled",ind(2));
+    select("99");
+    set("enabled",ind(1));
+    run;
+    exz=pinch(getelectric("XY"));
+    EFxz=exz^2;#enhancement factor
+    enhancement = max(EFxz);
+    generation(pop,numberofgenes+1) = enhancement;
+    }   
+    enh = generation(:,numberofgenes+1);
+    sortedenhancement = sort(enh,false);
+    # elite func = 0.1 * Populationsize - the number of individuals that are guaranteed to survive to the next generation. 
+    # Crossover = 0.8 - specifies the fraction of the next generation that crossover produces. Mutation produces the remaining individuals in the next generation. 
+    # Mutation = rest - Uniform is a two-step process. First, the algorithm selects a fraction of the vector entries of an individual for mutation, where each entry has the same probability as the mutation rate of being mutated. In the second step, the algorithm replaces each selected entry by a random number selected uniformly from the range for that entry.
+    sumpop = round(numberofpopulation * elite);
+    crossover = round(numberofpopulation * crossoverrate);
+    selected = matrix(sumpop,numberofgenes);
+    for(j=1:sumpop){
+        max_ind = find(generation(:,numberofgenes+1),sortedenhancement(j));
+        selected(j,:) = generation(max_ind,1:numberofgenes);        
+    }  
+    bestfitness(it,1:numberofgenes) = selected(1,:);
+    bestfitness(it,numberofgenes+1) = sortedenhancement(1);
+    stallenh = sortedenhancement(1);    
+    bestworstaverage(it,1) = sortedenhancement(1);
+    bestworstaverage(it,2) = sortedenhancement(numberofpopulation);
+    bestworstaverage(it,3) = mean(enh);        
+    nextgen = matrix(numberofpopulation,numberofgenes);
+    nextgen(1:sumpop,:) = selected;
+    crossoverpoint1 = rand(1,numberofgenes-1,2);
+    crossoverpoint2 = rand(1,numberofgenes-1,2);
+    for(0;crossoverpoint1<crossoverpoint2;0){
+        crossoverpoint2 = rand(1,numberofgenes,2);
+    }
+    for(j=sumpop+1; j<=crossover+sumpop; j=j+2){
+        crossoverind1 = rand(1,numberofpopulation,2);
+        crossoverind2 = rand(1,numberofpopulation,2);
+        nextgen(j,1:crossoverpoint1) = generation(crossoverind1,1:crossoverpoint1);
+        nextgen(j,crossoverpoint1+1:crossoverpoint2) = generation(crossoverind2,crossoverpoint1+1:crossoverpoint2);
+        nextgen(j,crossoverpoint2:numberofgenes) = generation(crossoverind1,crossoverpoint2:numberofgenes);
+        nextgen(j+1,1:crossoverpoint1) = generation(crossoverind2,1:crossoverpoint1);
+        nextgen(j+1,crossoverpoint1+1:crossoverpoint2) = generation(crossoverind1,crossoverpoint1+1:crossoverpoint2);
+        nextgen(j+1,crossoverpoint2:numberofgenes) = generation(crossoverind2,crossoverpoint2:numberofgenes);
+    }
+    mutation = numberofpopulation - sumpop - crossover;
+    mutatedgene = round(numberofgenes*mutationrate);
+    lastind = crossover+sumpop+1;    
+    for(mut = 1:mutation){
+        
+        mutatedpop = rand(1,numberofpopulation,2);
+        nextgen(lastind,:) = generation(mutatedpop,1:numberofgenes);
+        for(g = 1:mutatedgene){        
+            rndm_gene = rand(1,numberofgenes,2);        
+            if (generation(mutatedpop,rndm_gene)=0){
+                nextgen(lastind,mutatedgene)=1;
+            }else{
+                nextgen(lastind,mutatedgene)=0;        
+            } 
+        }  
+        lastind = lastind + 1; 
+    }
+    if(bestfitness(it,numberofgenes+1)- stallenh <= 1e-6){
+        stalllimit = stalllimit+1;    
+    }else{
+        stalllimit = 0;
+    }
+    if(stalllimit == stallgenlim){
+        pause(1);
+        ?"Stall generation limit is reached";
+        break;
+    }       
+    ?bestfitness(1:it,:);
+}
