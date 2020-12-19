@@ -1,0 +1,75 @@
+Lumerical 2020a FDTD Solver Version 8.23.2271 (Linux 64bit)
+ expires (month/day/year): 4/28/2021
+using config file: /kuacc/users/bebrem18/.config/Lumerical/License.ini
+license host: <a href=http://licserv:8095>licserv:8095</a>
+current time: Sun May 24 15:42:45 2020
+Running on host: be03.kuacc.ku.edu.tr
+All processes are communicating and ready to proceed to simulation...
+Running fsp file: /scratch/kuacc/apps/lumerical/2020a/bin/fdtd-engine-mpich2nem -t 1 -remote -ttyname /dev/pts/0 /scratch/users/bebrem18/Documents/3D_sym.fsp
+number of processors was reduced to 1 from a target of 12
+processors are distributed as: 1x1x1
+Running 3D Simulation
+Starting meshing
+Simulation size in gridpoints: 55 x 56 x 64
+Refined 0 mesh cells (0%)
+Completed meshing!
+Meshing complete in 0.19 seconds of CPU time
+7680 7680
+Starting meshing
+Simulation size in gridpoints: 55 x 56 x 64
+Refined 0 mesh cells (0%)
+Completed meshing!
+Meshing complete in 0.16 seconds of CPU time
+4080 4080
+Starting meshing
+Simulation size in gridpoints: 55 x 56 x 64
+Refined 0 mesh cells (0%)
+Completed meshing!
+Meshing complete in 0.18 seconds of CPU time
+4704 4704
+finished material properties
+Meshing Time: 0.424178 seconds, Init Electrical Material Time: 0.041083 seconds, Init Magnetic Material Time: 0.000901
+Using selected optimization level: 2
+Selecting 3d kernel for splitFieldDirection=0 and optLevel=2
+-----------------------------------------
+Beginning initialization of 3D Simulation
+Starting to add sources to simulation
+Adding 3D TFSF source propagating in Z
+snapPEC is a duplicate key.
+Starting meshing
+Simulation size in gridpoints: 3 x 3 x 185
+Refined 0 mesh cells (0%)
+Completed meshing!
+Meshing complete in 0 seconds of CPU time
+0 0
+Starting meshing
+Simulation size in gridpoints: 3 x 3 x 185
+Refined 0 mesh cells (0%)
+Completed meshing!
+Meshing complete in 0 seconds of CPU time
+0 0
+Starting meshing
+Simulation size in gridpoints: 3 x 3 x 185
+Refined 0 mesh cells (0%)
+Completed meshing!
+Meshing complete in 0 seconds of CPU time
+0 0
+finished material properties
+Meshing Time: 0.002393 seconds, Init Electrical Material Time: 0.00222 seconds, Init Magnetic Material Time: 1.5e-05
+Using selected optimization level: 2
+Selecting 3d kernel for splitFieldDirection=0 and optLevel=2
+Starting to add boundary conditions to simulation
+Adding 3D Anti-Symmetric BC
+Adding 3D PML BC
+Adding 3D Symmetric BC
+Adding 3D PML BC
+Adding 3D PML BC
+Adding 3D PML BC
+Starting to add monitors to Simulation
+Adding analysis monitor
+Adding 3D DFT monitor
+Finished initialization of 3D Simulation
+-----------------------------------------
+All processes are communicating and ready to proceed to simulation...
+Starting 52580 total iterations
+0.09129% complete. Max time remaining: 4 mins, 29 secs. Auto Shutoff: 1
